@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính online</title>
+</head>
+<body>
+    <h4><b>CALCULATOR</b></h4>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <br>
+    <br>
+    <button type="button" onclick="add()">Addtition(+)</button>
+    <button type="button" onclick="sub()">Subtraction(-)</button>
+    <button type="button" onclick="mul()">Multiplication(*)</button>
+    <button type="button" onclick="div()">Division(/)</button>
+    <br>
+    <p>Result:</p>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function add(){
+        let num1 = document.getElementById("num1").value;
+            num1=Number(num1);
+        let num2 = document.getElementById("num2").value;
+            num2 = Number(num2);
+        let result = "";
+
+        result=num1+num2;
+        document.getElementById("result").innerHTML = "Addtition " + result;
+        console.log;
+    }
+
+    function sub(){
+        let num1 = document.getElementById("num1").value;
+            num1=Number(num1);
+        let num2 = document.getElementById("num2").value;
+            num2 = Number(num2);
+        let result = "";
+
+        result=num1-num2;
+        document.getElementById("result").innerHTML = "Subtraction " + result;
+        console.log;
+    }
+
+    function mul(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let result = "";
+
+        result=num1*num2;
+        document.getElementById("result").innerHTML = "Multiplication " + result;
+        console.log;
+    }
+
+    function div(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let result = "";
+
+        if (num2 ==0){
+            alert("Tính toán bị lỗi. Xin nhập lại");
+        }else
+            result=num1/num2;
+            document.getElementById("result").innerHTML = "Division " + result;
+            console.log;
+    }
+</script>
